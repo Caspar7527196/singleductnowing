@@ -822,7 +822,7 @@ inline bool Send_User1(void)
 	return USART3_Transmit_DMA((u8 *)tran->TxDat, 45);
 }
 
-inline bool Send_User3(void)
+inline bool Send_User(void)
 {
 	if(tran->TxFlag == true)
 	{
@@ -1257,7 +1257,7 @@ _temp =  ahrs[1].Ang[0]*R2D*100;//userdata1
 	tran->TxDat[44]=sum;
 	return USART3_Transmit_DMA((u8 *)tran->TxDat, 45);
 }
-inline bool Send_User(void)
+inline bool Send_User3(void)
 {
 	if(tran->TxFlag == true)
 	{

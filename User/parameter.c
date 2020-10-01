@@ -209,8 +209,8 @@ void Para_Init(sPARA *ele)
 
 	
 	//地面站PID1
-	ele->pidcfg[0].Kp = 0.4f;
-	ele->pidcfg[0].Ki = 0.32f;
+	ele->pidcfg[0].Kp = 0.2f;
+	ele->pidcfg[0].Ki = 0.2f;
 	ele->pidcfg[0].Kd = 0.0f;
 	ele->pidcfg[0].Kb = 0.0f;
 	ele->pidcfg[0].eLimit = 4*PI;
@@ -218,8 +218,8 @@ void Para_Init(sPARA *ele)
 	ele->pidcfg[0].dLimit = PI;
 	Pid_Init_Para(pidRolRate,&ele->pidcfg[0]);
 	//2
-	ele->pidcfg[1].Kp = 0.4f;
-	ele->pidcfg[1].Ki = 0.32f;
+	ele->pidcfg[1].Kp = 0.2f;
+	ele->pidcfg[1].Ki = 0.2f;
 	ele->pidcfg[1].Kd = 0.0f;
 	ele->pidcfg[1].Kb = 0.0f;
 	ele->pidcfg[1].eLimit = 4*PI;
@@ -227,8 +227,8 @@ void Para_Init(sPARA *ele)
 	ele->pidcfg[1].dLimit = PI;
 	Pid_Init_Para(pidPitRate,&ele->pidcfg[1]);
 	//3
-	ele->pidcfg[2].Kp = 0.25f;
-	ele->pidcfg[2].Ki = 0.5f;
+	ele->pidcfg[2].Kp = 0.15f;
+	ele->pidcfg[2].Ki = 0.25f;
 	ele->pidcfg[2].Kd = 0.0f;
 	ele->pidcfg[2].Kb = 0.0f;
 	ele->pidcfg[2].eLimit = 4*PI;
@@ -262,25 +262,25 @@ void Para_Init(sPARA *ele)
 	
 	
 	//7，x速度
-	ele->pidcfg[6].Kp = 1.0;//0.8
+	ele->pidcfg[6].Kp = 3.0;//0.8
 	ele->pidcfg[6].Ki = 0.1;//0.5
-	ele->pidcfg[6].Kd = 0.0f;
+	ele->pidcfg[6].Kd = 0.1f;
 	ele->pidcfg[6].Kb = 0.0f;
 	ele->pidcfg[6].eLimit = 20;
 	ele->pidcfg[6].iLimit = 20;
 	ele->pidcfg[6].dLimit = 20;
 	Pid_Init_Para(pidXRate,&ele->pidcfg[6]);
 	//8，y速度
-	ele->pidcfg[7].Kp = 1.0;//0.8
+	ele->pidcfg[7].Kp = 3.0;//0.8
 	ele->pidcfg[7].Ki = 0.1;//0.5
-	ele->pidcfg[7].Kd = 0.0f;
+	ele->pidcfg[7].Kd = 0.1f;
 	ele->pidcfg[7].Kb = 0.0f;
 	ele->pidcfg[7].eLimit = 20;
 	ele->pidcfg[7].iLimit = 20;
 	ele->pidcfg[7].dLimit = 20;
 	Pid_Init_Para(pidYRate,&ele->pidcfg[7]);
 	//9，z速度，没有用
-	ele->pidcfg[8].Kp = 1.5f;
+	ele->pidcfg[8].Kp = 2.5f;
 	ele->pidcfg[8].Ki = 0.1f;
 	ele->pidcfg[8].Kd = 0.0f;
 	ele->pidcfg[8].Kb = 0.0f;
@@ -289,7 +289,7 @@ void Para_Init(sPARA *ele)
 	ele->pidcfg[8].dLimit = 20;
 	Pid_Init_Para(pidZRate,&ele->pidcfg[8]);
 	//10，x位置
-	ele->pidcfg[9].Kp = 0.3f;
+	ele->pidcfg[9].Kp = 1.0f;
 	ele->pidcfg[9].Ki = 0.0f;
 	ele->pidcfg[9].Kd = 0.0f;
 	ele->pidcfg[9].Kb = 0.0f;
@@ -298,7 +298,7 @@ void Para_Init(sPARA *ele)
 	ele->pidcfg[9].dLimit = 200.0f;
 	Pid_Init_Para(pidX,&ele->pidcfg[9]);
 	//11，y位置
-	ele->pidcfg[10].Kp = 0.3f;
+	ele->pidcfg[10].Kp = 1.0f;
 	ele->pidcfg[10].Ki = 0.0f;
 	ele->pidcfg[10].Kd = 0.0f;
 	ele->pidcfg[10].Kb = 0.0f;
@@ -307,7 +307,7 @@ void Para_Init(sPARA *ele)
 	ele->pidcfg[10].dLimit = 200.0f;
 	Pid_Init_Para(pidY,&ele->pidcfg[10]);
 	//12，z位置
-	ele->pidcfg[11].Kp = 0.4f;//激光2.50f;
+	ele->pidcfg[11].Kp = 0.6f;//激光2.50f;
 	ele->pidcfg[11].Ki = 0.01f;//0.20f;
 	ele->pidcfg[11].Kd = 0.01f;//2.50f;
 	ele->pidcfg[11].Kb = 0.0f;

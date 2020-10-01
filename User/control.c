@@ -55,7 +55,7 @@ void Control_Init(void)
 	CtrlLpIO->wp=0.0f;
 	CtrlLpIO->wr=0.0f;
 	CtrlLpIO->k1=100.0f;
-	CtrlLpIO->ko1=20.0f;
+	CtrlLpIO->ko1=100.0f;
 	CtrlLpIO->ko2=0.0f;
 	CtrlLpIO->ko3=0.0f;
 	CtrlLpIO->Vn_Pred[0]=0.0f;
@@ -235,7 +235,7 @@ void Out_Loop_XY_Pre(sLOOPIO *ele)
 	double X_err,Y_err;
   bool   X_command_flag,Y_command_flag;
 	float  Vel_tol=0.2;
-	int    brake_end=20;
+	int    brake_end=50;
 	//----------------------¼ì²â´ò¸ËÓë·ñ--------------------------------------
 	if (CtrlIO->input[1]<10 && CtrlIO->input[1]>-10) X_command_flag = true;
 	else  	                                         X_command_flag = false;
@@ -291,7 +291,7 @@ void Out_Loop_Z_Pre(sLOOPIO *ele)
 	{
 		ele->Z_command[0] = CtrlFbck->Z[0];
 		ele->Z_mid        = CtrlFbck->Z[0];
-//			ele->Z_mid = 0.0f;
+			//ele->Z_mid = 0.0f;
 		ele->Z_mid_pwm    = CtrlIO->input[3];
 		ele->w1=0.0f;
 		ele->wr=0.0f;
